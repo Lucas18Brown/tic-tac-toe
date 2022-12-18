@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+// import Confetti from 'react-confetti';
+// import React, { useEffect, useState } from 'react';
+// import {useWindowSize} from 'react-use';
 
 function Square(props) {
-  console.log(props)
-
   return (
     <button
       className="square"
@@ -14,6 +15,27 @@ function Square(props) {
     </button>
   );
 }
+
+// function confetti() {
+//   const [width, setWidth] = useState(window.innerWidth);
+//   const [height, setHeight] = useState(window.innerHeight);
+
+//   useEffect(() => {
+//     const handleResize = () => {
+//       setWidth(window.innerWidth);
+//       setHeight(window.innerHeight);
+//     };
+//     window.addEventListener('resize', handleResize);
+//     return () => window.removeEventListener('resize', handleResize);
+//   }, []);
+
+//   return (
+//     <Confetti
+//       width={width}
+//       height={height}
+//     />
+//   );
+// }
 
 function calculateWinner(squares) {
   const lines = [
