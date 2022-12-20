@@ -54,11 +54,8 @@ ol, ul {
 
 .game {
   display: flex;
-  flex-direction: row;
-  /* justify-content: center; */
-  position: absolute;
-  top: 28%;
-  left: 40%;
+  justify-content: center;
+  margin: 130px 0 130px 130px;
 }
 
 .game-info {
@@ -82,4 +79,8 @@ ol {
 
 .step:hover {
   transform: scale(1.1);
+}
+
+.status {
+  margin: 40px 0;
 }

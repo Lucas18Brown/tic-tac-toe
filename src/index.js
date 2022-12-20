@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Confetti from 'react-confetti'
 
 function Square(props) {
   return (
@@ -99,6 +100,12 @@ class Game extends React.Component {
         )
     })
 
+    function confetti() {
+      if (winner){
+        return <Confetti></Confetti>
+      };
+    }
+
     let status;
     if (winner) {
       status = 'Winner: ' + winner;
@@ -108,6 +115,7 @@ class Game extends React.Component {
 
     return (
       <div className='container'>
+        {confetti()}
         <h1>Tic - Tac - Toe</h1>
         <div className="game">
           <div className="game-board">
@@ -117,11 +125,11 @@ class Game extends React.Component {
             />
           </div>
           <div className="game-info">
-            <div>{status}</div>
             <ol>{moves}</ol>
           </div>
         </div>
-        </div>
+        <div className='status'>{status}</div>
+      </div>
     );
   }
 }
