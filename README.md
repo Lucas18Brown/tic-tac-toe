@@ -1,4 +1,4 @@
-# tic-tac-toe!!
+# Tic-Tac-Toe!!
 
 # Getting Started with Create React App
 
